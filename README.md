@@ -22,7 +22,7 @@ An LSTM model is developed using TensorFlow, with appropriate architecture and h
 ## How to Install and Run the Project
 ### 1. Clone the repository to your local machine using the following command:
 ```shell
-git clone <repository_url>
+git clone https://github.com/farah2p/farah-capstone2-ecommerce-text.git
 ```
 ### 2. Before running the code, ensure that you have the following dependencies installed:
 - TensorFlow
