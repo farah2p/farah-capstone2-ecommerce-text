@@ -25,9 +25,10 @@ Some challenges and features that can be implemented in the future include:
 
 ## File Structure
 - ecommerceDataset.csv: The dataset containing text documents and their corresponding labels.
-- main.py: The main Python script containing the code for the project.
-- saved_models/: A directory to store the saved model in .h5 format.
+- farah-capstone2-ecommerce.ipynb: The main Python script containing the code for the project.
+- saved_models: A directory to store the saved model in .h5 format.
 - tokenizer.pkl: The tokenizer object saved using pickle for future use.
+
 ## Future Implementations
 - Implementing additional features for improved model performance.
 - Enhancing the preprocessing pipeline for better text representation.
