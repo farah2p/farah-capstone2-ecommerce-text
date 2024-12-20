@@ -1,111 +1,89 @@
 # E-commerce Product Categorization
 
 ## Project Description
-The project aims to develop a machine learning model using Long Short-Term Memory (LSTM) for categorizing unseen products into four categories: "Electronics", "Household", "Books", and "Clothing & Accessories". The model is trained on a dataset obtained from Ecommerce Text Classification. The project involves data preprocessing, model development using TensorFlow, training, evaluation, and visualization using Tensorboard. The goal is to develop a machine learning model using LSTM that achieves an accuracy of more than 85% and an F1 score of more than 0.7.
+This project aims to develop a machine learning model using Long Short-Term Memory (LSTM) to categorize unseen products into four categories: "Electronics", "Household", "Books" and "Clothing & Accessories". Leveraging TensorFlow and text classification techniques, the model achieves high accuracy and reliability, meeting the objective of an accuracy above 85% and an F1 score exceeding 0.7.
 
-## Project Functionality
-- Utilizes LSTM model to classify product texts into categories.
-- Handles challenges related to data preprocessing and text classification.
-- Saves the trained model and tokenizer for future use.
-- Visualizes the model graph and training progress using Tensorboard.
+## Project Highlights
+- Text Classification: Automatically categorizes product descriptions into predefined categories.
+- LSTM Architecture: Employs LSTM for sequence modeling and feature extraction.
+- Data Handling: Efficient preprocessing, tokenization and padding for optimal text representation.
+- Performance Metrics: Evaluates accuracy, precision, recall and F1 score for robust assessment.
+- Model Deployment: Saves trained models and tokenizer for future predictions.
+- Visualization: Uses TensorBoard to monitor training progress and model performance.
 
 ## Challenges and Solutions
-Some challenges faced during the project include:
-- Data preprocessing: Handling missing values and duplicates, and performing text tokenization and padding.
-- Model architecture selection: Choosing the appropriate architecture for text classification.
-- Training and evaluation: Optimizing model performance and interpreting evaluation metrics.
+### Challenges
+1) Data Preprocessing: Managing missing values, duplicates, tokenization, and padding.
+2) Model Selection: Choosing an appropriate architecture for text classification.
+3) Performance Optimization: Ensuring generalization and avoiding overfitting.
 
-To overcome these challenges, the project uses pandas for data handling, Keras for model creation, and scikit-learn for evaluation metrics. Extensive documentation and online resources were referenced to address specific challenges and ensure best practices.
+### Solutions
+1) Utilized pandas for data cleaning and preprocessing.
+2) Implemented TensorFlow Keras for model creation and training.
+3) Applied scikit-learn metrics for evaluation and ensured a balanced dataset using augmentation techniques.
 
-## Future Challenges and Features
-Some challenges and features that can be implemented in the future include:
-- Handling imbalanced datasets: Implementing techniques to address class imbalance if encountered.
-- Fine-tuning the model: Experimenting with hyperparameter tuning and exploring different architectures to improve performance.
-- Multilingual support: Extending the model to handle multiple languages for broader applicability.
+## Future Enhancements
+1) Handling Imbalanced Datasets: Incorporating SMOTE or other techniques for class balance.
+2) Hyperparameter Tuning: Experimenting with advanced tuning methods for improved results.
+3) Multilingual Support: Expanding the model for multiple languages to increase versatility.
 
 ## File Structure
-- ecommerceDataset.csv: The dataset containing text documents and their corresponding labels.
-- farah-capstone2-ecommerce.ipynb: The main Python script containing the code for the project.
-- saved_models: A directory to store the saved model in .h5 format.
-- tokenizer.pkl: The tokenizer object saved using pickle for future use.
-
-## Future Implementations
-- Implementing additional features for improved model performance.
-- Enhancing the preprocessing pipeline for better text representation.
-- Exploring advanced LSTM architectures and techniques for better classification accuracy.
+- ecommerceDataset.csv: Dataset with product descriptions and labels.
+- farah-capstone2-ecommerce.ipynb: Main Python notebook containing project code.
+- saved_models: Directory to store the trained model (model.h5).
+- tokenizer.pkl: Pickled tokenizer object for future use.
 
 ## Setup and Dependencies
-To run the code, make sure you have the following dependencies installed:
-- pandas
-- numpy
-- tensorflow
-- matplotlib
-- scikit-learn
+### Installation:
+Install the required dependencies using the following commands:
+```shell
+pip install tensorflow==2.12.0  
+pip install numpy==1.24.2  
+pip install matplotlib==3.7.1  
+pip install pandas==1.5.3  
+pip install scikit-learn==1.2.2
+```
 
-## Getting Started
-- Ensure that all the necessary dependencies are installed.
-- Place the ecommerceDataset.csv file in the same directory as the main.py file.
-- Run the main.py file to execute the code.
-- The code will perform data preprocessing, train the model, evaluate its performance, visualize accuracy, and provide inference results.
-- The trained model will be saved in the saved_models/ directory as model.h5, and the tokenizer object will be saved as tokenizer.pkl.
-
-## How to Install and Run the Project
-### 1. Clone the repository to your local machine using the following command:
+### Getting started:
+#### 1. Clone the repository to your local machine using the following command:
 ```shell
 git clone https://github.com/farah2p/farah-capstone2-ecommerce-text.git
 ```
-### 2. Change to the project directory:
+#### 2. Change to the project directory:
 ```shell
 cd product-categorization
 ```
-NOTES: Replace product-categorization with your project directory path
-### 3. Before running the code, ensure that you have the installed all the required dependencies
-Install the required dependencies by running the following command:
-```shell
-pip install tensorflow==2.12.0
-pip install numpy==1.24.2
-pip install matplotlib==3.7.1
-pip install pandas==1.5.3
-pip install tensorboard===2.12.3
-```
-### 4. Download the dataset:
-- The dataset used for this project can be obtained from https://www.kaggle.com/datasets/saurabhshahane/ecommerce-text-classification 
-- Place the downloaded dataset file (ecommerceDataset.csv) in the project directory.
-### 5. Open the Jupyter Notebook or Python script containing the code.
-Run the main script:
-```shell
-python farah-capstone2-ecommerce.ipynb
-```
+#### 3. Place the ecommerceDataset.csv in the project directory.
 
-The script will perform data preprocessing, train the model, evaluate its performance, visualize accuracy, and provide inference results.
-### 6. Use Tensorboard to visualize the model graph and training progress by running the following command in the project directory:
+### How To Run:
+#### 1. Open the Jupyter Notebook or Python script:
 ```shell
-tensorboard --logdir tensorboard_logs/capstone2
+python farah-capstone2-ecommerce.ipynb  
 ```
-Access Tensorboard in your web browser using the provided URL.
-### 7. The trained model will be saved in the saved_models/ directory as model.h5, and the tokenizer object will be saved as tokenizer.pkl.
-
-## Project Requirements
-- Python
-- TensorFlow library
+#### 2. Perform the following:
+- Data preprocessing.
+- Train and evaluate the LSTM model.
+- Save the model and tokenizer.
+- Visualize results using TensorBoard:
+```shell
+tensorboard --logdir tensorboard_logs/capstone2  
+```
+Access TensorBoard in your browser using the provided URL.
 
 ## Results
-After developing the LSTM-based model for E-commerce Product Categorization, the following results were achieved:
+The model achieved the following metrics:
 - Training Loss: 0.0905
 - Training Accuracy: 97.65%
 - Validation Loss: 0.2122
 - Validation Accuracy: 95.18%
 - F1 Score: 0.952
 
-The project's objective was to develop a model using LSTM that achieves an accuracy of more than 85% and an F1 score of more than 0.7. The model successfully met and exceeded these requirements.
+## Evaluation
+- Training Performance: Demonstrated a low loss and high accuracy, ensuring strong learning on the training data.
+- Validation Performance: The model exhibited excellent generalization with high validation accuracy and minimal overfitting.
+- F1 Score: A score of 0.952 highlights the model's balance between precision and recall, confirming its efficacy in categorizing products accurately.
 
-During training, the model achieved a low training loss of 0.0905, which considers as a good fit to the training data indicates that the model effectively minimized the difference between predicted and actual values during the training phase. The training accuracy reached an impressive 97.65%, demonstrating the model's ability to accurately classify E-commerce products into different categories. 
-
-For validation, the model achieved a validation loss of 0.2122 and a validation accuracy of 95.18%. These results confirm that the model performs well not only on the training data but also on unseen validation data, showcasing its generalization capabilities.
-
-Furthermore, the F1 score is an important metric that combines precision and recall. The model achieved an F1 score of 0.952, which suggests a high level of accuracy and effectiveness in categorizing the E-commerce products. It indicates that the model has achieved a high level of accuracy in categorizing the products into the desired categories. This suggests that the model has a good balance between correctly identifying positive instances and avoiding false positives and false negatives.
-
-Overall, the developed LSTM-based model successfully met and surpassed the project's criteria, achieving an accuracy of over 85% and an F1 score of more than 0.7. This demonstrates the model's efficacy in accurately categorizing E-commerce products and provides a reliable solution for businesses seeking automated product classification.
+The LSTM-based model surpassed the project's criteria, achieving over 85% accuracy and an F1 score above 0.7. It offers a reliable and scalable solution for automated product categorization, benefiting businesses in streamlining operations and improving customer experience.
 
 Below are some sample visualizations generated by the project:
 
